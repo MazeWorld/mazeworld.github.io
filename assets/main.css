@@ -1,0 +1,67 @@
+/** Base styles and typography **/
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background: #000000;
+    color: #9B9B9B;
+
+    font: 13px Segoe UI, Ubuntu Light, Verdana, Tahoma, DejaVu Sans, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: normal;
+    margin: 0;
+    padding-top: .5em;
+}
+
+h1 {
+    color: #FFA500;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+a,
+a:hover,
+a:visited {
+    color: #FF3F1F;
+    border-bottom: 1px solid #9B9B9B;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #FF3F1F;
+    color: #000000;
+    border-color: #FFFFFF;
+}
+
+/** Navigation **/
+.mzw-navigation {
+    background: #222;
+}
+
+.mzw-navigation__list {
+    list-style: none;
+}
+
+.mzw-navigation__item {
+    display: inline-block;
+    padding: 8px 0;
+}
+
+.mzw-navigation__item > a,
+.mzw-navigation__item > a:hover,
+.mzw-navigation__item > a:visited {
+    padding: 0 1px;
+}
+
+.mzw-navigation__item > a:hover {
+}
+
+/** Main **/
+.mzw-main {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2em;
+}
