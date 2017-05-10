@@ -1,3 +1,5 @@
+// Automatically instantiates itself based on a class name of mzw-randoms-app.
+// i.e. insert <div class="mzw-randoms-app"></div>
 function MazeWorldRandoms(app) {
 
     // Context.
