@@ -29,7 +29,6 @@ MazeWorldRandoms.prototype.renderCollections = function(collections) {
         collectionLink.href = '#scratchpad'
         collectionLink.setAttribute('data-collection', collection)
         collectionLink.addEventListener('click', function(e) {
-            e.preventDefault()
             var desiredCollection = e.target.getAttribute('data-collection')
             self.newRandomTerm(desiredCollection)
         })
@@ -42,9 +41,10 @@ MazeWorldRandoms.prototype.newRandomTerm = function(term) {
     var self = this;
     this.fetchCollection(term)
         .then(function(resultText) {
-            self.scratchpad.innerHTML = "<br>"
+            self.scratchpad.innerHTML = ""
             self.scratchpad.innerText = term
-            var showoff = document.createElement('tt')
+            var showoff = document.createElement('p')
+            showoff.style.fontFamily = 'monospace'
             showoff.innerText = resultText
             self.scratchpad.appendChild(showoff)
         })
