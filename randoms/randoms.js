@@ -42,7 +42,7 @@ MazeWorldRandoms.prototype.newRandomTerm = function(term) {
     var self = this;
     this.fetchCollection(term)
         .then(function(resultText) {
-            self.scratchpad.innerHTML = ""
+            self.scratchpad.innerHTML = "<br>"
             self.scratchpad.innerText = term
             var showoff = document.createElement('tt')
             showoff.innerText = resultText
