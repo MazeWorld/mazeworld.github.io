@@ -5,12 +5,11 @@ function MazeWorldRandoms(app) {
     // Context.
     var self = this
 
-    self.app = this
-
     // Clean slate.  No luxury of DOM-diffing here.
     app.innerHTML = ""
 
     self.scratchpad = document.createElement('h4')
+    self.scratchpad.id = 'scratchpad'
     app.appendChild(self.scratchpad)
 
     self.collections = document.createElement('ul')
@@ -27,7 +26,7 @@ MazeWorldRandoms.prototype.renderCollections = function(collections) {
         var collectionListItem = document.createElement('li')
         var collectionLink = document.createElement('a')
         collectionLink.innerText = collection
-        collectionLink.href = '#'
+        collectionLink.href = '#scratchpad'
         collectionLink.setAttribute('data-collection', collection)
         collectionLink.addEventListener('click', function(e) {
             e.preventDefault()
@@ -45,7 +44,7 @@ MazeWorldRandoms.prototype.newRandomTerm = function(term) {
         .then(function(resultText) {
             self.scratchpad.innerHTML = ""
             self.scratchpad.innerText = term
-            var showoff = document.createElement('pre')
+            var showoff = document.createElement('tt')
             showoff.innerText = resultText
             self.scratchpad.appendChild(showoff)
         })
